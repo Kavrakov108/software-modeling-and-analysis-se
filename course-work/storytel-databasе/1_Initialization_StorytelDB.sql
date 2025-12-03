@@ -34,7 +34,7 @@ CREATE TABLE Publishers(
     Website NVARCHAR(200)
 );
 
--- 5. Books (включва AverageRating и ReviewCount)
+-- 5. Books (ГўГЄГ«ГѕГ·ГўГ  AverageRating ГЁ ReviewCount)
 CREATE TABLE Books(
     BookId INT IDENTITY PRIMARY KEY,
     Title NVARCHAR(300) NOT NULL,
