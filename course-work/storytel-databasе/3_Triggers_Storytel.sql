@@ -1,6 +1,4 @@
--- Тригер: при промяна в Reviews -> ъпдейта AverageRating и ReviewCount в Books
--- (работи за INSERT, UPDATE, DELETE)
--- ---------------------------------------------------------
+
 CREATE TRIGGER trg_Reviews_UpdateBookRating
 ON Reviews
 AFTER INSERT, UPDATE, DELETE
@@ -8,7 +6,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- съберем всички засегнати BookId от INSERTED и DELETED
+    -- Г±ГєГЎГҐГ°ГҐГ¬ ГўГ±ГЁГ·ГЄГЁ Г§Г Г±ГҐГЈГ­Г ГІГЁ BookId Г®ГІ INSERTED ГЁ DELETED
     DECLARE @tmp TABLE (BookId INT PRIMARY KEY);
     INSERT INTO @tmp (BookId)
     SELECT DISTINCT BookId FROM (
@@ -37,4 +35,5 @@ BEGIN
     CLOSE cur;
     DEALLOCATE cur;
 END;
+
 GO
