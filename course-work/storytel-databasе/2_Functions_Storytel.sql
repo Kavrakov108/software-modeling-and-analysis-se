@@ -1,5 +1,4 @@
--- Функция: връща средна оценка на книга (NULL->0)
--- ---------------------------------------------------------
+
 CREATE FUNCTION dbo.fn_GetAverageRating(@BookId INT)
 RETURNS DECIMAL(3,2)
 AS
@@ -10,3 +9,4 @@ BEGIN
     RETURN ROUND(@avg,2);
 END;
 GO
+
