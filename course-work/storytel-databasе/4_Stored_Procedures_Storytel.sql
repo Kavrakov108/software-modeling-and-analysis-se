@@ -1,6 +1,4 @@
--- Съхранена процедура: Добавя ревю (може да се използва от приложението)
--- Тя прави INSERT в Reviews; тригерът ще актуализира книгата
--- ---------------------------------------------------------
+
 CREATE PROCEDURE dbo.sp_AddReview
     @UserId INT,
     @BookId INT,
@@ -24,4 +22,5 @@ BEGIN
         RAISERROR('sp_AddReview failed: %s', 16, 1, @err);
     END CATCH
 END;
+
 GO
